@@ -1,0 +1,31 @@
+
+<mat-card>
+    <mat-card-title>Book Tickets</mat-card-title>
+    <form [formGroup]="bookingForm" (ngSubmit)="bookTickets()">
+      <mat-form-field class="w-100">
+        <mat-label>Movie Name</mat-label>
+        <input matInput formControlName="movieName" placeholder="Enter movie name">
+      </mat-form-field>
+  
+      <mat-form-field class="w-100">
+        <mat-label>Theatre Name</mat-label>
+        <input matInput formControlName="theatreName" placeholder="Enter theatre name">
+      </mat-form-field>
+  
+      <mat-form-field class="w-100">
+        <mat-label>Number of Tickets</mat-label>
+        <input matInput formControlName="numberOfTickets" type="number" min="1" placeholder="Enter number of tickets">
+      </mat-form-field>
+  
+      <mat-form-field class="w-100">
+        <mat-label>Seat Number</mat-label>
+        <input matInput formControlName="seatNumber" placeholder="Enter seat number">
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Book Now</button>
+    </form>
+  </mat-card>
+  
+  
+  
+  

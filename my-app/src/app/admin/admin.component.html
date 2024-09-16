@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-title>Admin Dashboard</mat-card-title>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Movie Name</th>
+          <th>Theatre Name</th>
+          <th>Tickets Booked</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of bookedTickets">
+          <td>{{ ticket.movieName }}</td>
+          <td>{{ ticket.theatreName }}</td>
+          <td>{{ ticket.ticketsBooked }}</td>
+          <td>{{ ticket.status }}</td>
+          <td>
+            <button mat-raised-button color="primary" (click)="updateStatus(ticket)">Update Status</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card>
+  

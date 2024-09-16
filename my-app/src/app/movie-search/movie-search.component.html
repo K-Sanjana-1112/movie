@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Search Movies</mat-card-title>
+    <mat-form-field class="w-100">
+      <mat-label>Movie Name</mat-label>
+      <input matInput [(ngModel)]="searchTerm" placeholder="Enter movie name">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="searchMovies()">Search</button>
+  
+    <div *ngFor="let movie of movies" class="mt-3">
+      <mat-card>
+        <mat-card-title>{{ movie.name }}</mat-card-title>
+        <mat-card-content>
+          <p>Theatre: {{ movie.theatre }}</p>
+          <p>Tickets Available: {{ movie.ticketsAvailable }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-card>
+  
+  
